@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/product_cart_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="14dp"
+        android:src="@drawable/ic_launcher_background"
+        android:minHeight="120dp"
+        android:minWidth="120dp"
+        android:maxWidth="180dp"
+        android:maxHeight="180dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="14dp"
+        />
+
+    <TextView
+        android:id="@+id/product_title_cart_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/product_cart_iv"
+        app:layout_constraintStart_toEndOf="@id/product_cart_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:text="Title"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:id="@+id/product_details_cart_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/product_title_cart_tv"
+        app:layout_constraintStart_toStartOf="@id/product_title_cart_tv"
+        app:layout_constraintTop_toBottomOf="@id/product_title_cart_tv"
+        android:textSize="14sp"
+        android:text="product details"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:textColor="#FA0707"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:id="@+id/product_price_cart_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/product_title_cart_tv"
+        app:layout_constraintEnd_toEndOf="@id/product_title_cart_tv"
+        app:layout_constraintTop_toBottomOf="@id/product_details_cart_tv"
+        android:layout_marginTop="12dp"
+        android:text="200 eg"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#A6192A"
+        />
+
+    <ImageButton
+        android:id="@+id/dec_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:minWidth="30dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toTopOf="@id/inc_ib"
+        app:layout_constraintBottom_toBottomOf="@id/inc_ib"
+        app:layout_constraintEnd_toStartOf="@id/quantity_tv"
+        android:background="@drawable/ic_remove"
+
+        />
+
+    <ImageButton
+        android:id="@+id/inc_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="30dp"
+        android:minHeight="30dp"
+        android:background="@drawable/ic_add1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/product_price_cart_tv"
+        app:layout_constraintBottom_toBottomOf="@id/product_price_cart_tv"
+        android:layout_marginEnd="8dp"
+        />
+    <TextView
+        android:id="@+id/quantity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/inc_ib"
+        app:layout_constraintBottom_toBottomOf="@id/inc_ib"
+        app:layout_constraintEnd_toStartOf="@id/inc_ib"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="1"
+        android:maxLines="1"
+
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@android:drawable/editbox_background_normal"
+        android:textColor="#F30404"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
